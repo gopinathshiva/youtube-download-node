@@ -1,6 +1,7 @@
 var path = require('path');
 var fs   = require('fs');
 var ytdl = require('youtube-dl');
+var readline = require('readline');
 
 
 var video = ytdl('https://www.youtube.com/watch?v=aMlhsoatlbY');
@@ -21,7 +22,7 @@ video.on('data', function(data) {
   if (size) {
     var percent = (pos / size * 100).toFixed(2);
     // console.log(percent + '%');
-    process.stdout.cursorTo(0);
+    readline.cursorTo(process.stdout, 0);
     process.stdout.clearLine(1);
     process.stdout.write(percent + '%');
   }
