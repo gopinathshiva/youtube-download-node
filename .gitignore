@@ -2,3 +2,14 @@
 # http://git-scm.com/docs/gitignore
 
 node_modules/
+
+*.wmv
+*.mpg
+*.mpeg
+*.mp4
+*.mov
+*.flv
+*.avi
+*.ogv
+*.ogg
+*.webm
