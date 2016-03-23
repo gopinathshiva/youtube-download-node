@@ -23,9 +23,10 @@ video.on('data', function(data) {
   // `size` should not be 0 here.
   if (size) {
     var percent = (pos / size * 100).toFixed(2);
-    process.stdout.cursorTo(0);
-    process.stdout.clearLine(1);
-    process.stdout.write(percent + '%');
+    console.log(percent + '%');
+    // process.stdout.cursorTo(0);
+    // process.stdout.clearLine(1);
+    // process.stdout.write(percent + '%');
   }
 });
 
