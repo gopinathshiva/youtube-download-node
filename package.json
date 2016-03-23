@@ -8,5 +8,8 @@
   },
   "dependencies": {
     "youtube-dl": "^1.10.5"
+  },
+  "scripts":{
+    "start":"node download.js"
   }
 }
