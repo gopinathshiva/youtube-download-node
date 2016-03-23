@@ -1,0 +1,12 @@
+{
+  "name": "Youtube-Download-Automater",
+  "description": "Automatic youtube downloader for the given urls",
+  "version": "1.0.0",
+  "engines": {
+    "node": "4.2.x",
+    "npm": "2.14.x"
+  },
+  "dependencies": {
+    "youtube-dl": "^1.10.5"
+  }
+}
