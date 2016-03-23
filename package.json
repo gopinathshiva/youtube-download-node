@@ -7,7 +7,13 @@
     "npm": "2.14.x"
   },
   "dependencies": {
-    "youtube-dl": "^1.10.5"
+    "csvtojson": "^0.5.2",
+    "google-auth-library": "^0.9.7",
+    "googleapis": "^3.1.0",
+    "node-youtube-resumable-upload": "^0.2.1",
+    "request": "^2.69.0",
+    "youtube-dl": "^1.10.5",
+    "youtube-video-api": "^0.3.4"
   },
   "scripts":{
     "start":"node download.js"

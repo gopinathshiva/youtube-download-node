@@ -13,3 +13,6 @@ node_modules/
 *.ogv
 *.ogg
 *.webm
+
+client_secret.json
+.google-oauth2-credentials.json

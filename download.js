@@ -3,8 +3,7 @@ var fs   = require('fs');
 var ytdl = require('youtube-dl');
 
 
-var video = ytdl('https://www.youtube.com/watch?v=fCYAb5Dvn2g');
-
+var video = ytdl('https://www.youtube.com/watch?v=aMlhsoatlbY');
 
 var size = 0;
 video.on('info', function(info) {
@@ -21,10 +20,10 @@ video.on('data', function(data) {
   // `size` should not be 0 here.
   if (size) {
     var percent = (pos / size * 100).toFixed(2);
-    console.log(percent + '%');
-    // process.stdout.cursorTo(0);
-    // process.stdout.clearLine(1);
-    // process.stdout.write(percent + '%');
+    // console.log(percent + '%');
+    process.stdout.cursorTo(0);
+    process.stdout.clearLine(1);
+    process.stdout.write(percent + '%');
   }
 });
 
