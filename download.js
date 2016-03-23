@@ -3,9 +3,7 @@ var fs   = require('fs');
 var ytdl = require('youtube-dl');
 
 
-var video = ytdl('https://www.youtube.com/watch?v=aMlhsoatlbY',
-  // Optional arguments passed to youtube-dl.
-  ['-f', '22']);
+var video = ytdl('https://www.youtube.com/watch?v=iUOZf3ajJ-I');
 
 
 var size = 0;
@@ -31,5 +29,5 @@ video.on('data', function(data) {
 });
 
 video.on('end', function() {
-  console.log();
+  console.log('video completed');
 });
