@@ -23,8 +23,8 @@ video.on('data', function(data) {
     var percent = (pos / size * 100).toFixed(2);
     // console.log(percent + '%');
     readline.cursorTo(process.stdout, 0);
-    process.stdout.clearLine(1);
-    process.stdout.write(percent + '%');
+    readline.clearLine(1);
+    readline.write(percent + '%');
   }
 });
 
