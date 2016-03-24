@@ -13,6 +13,9 @@ node_modules/
 *.ogv
 *.ogg
 *.webm
+*.3gp
+
+*.csv
 
 client_secret.json
 .google-oauth2-credentials.json

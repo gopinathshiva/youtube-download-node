@@ -1,11 +1,22 @@
-var request = require('request');
-var Converter = require('csvtojson').Converter;
+var csv = require("fast-csv");
+var fs = require('fs');
+var stream = fs.createReadStream("youtube.csv");
+ 
+csv
+ .fromStream(stream)
+ .on("data", function(data){
+     console.log(data);
+ })
+ .on("end", function(){
+     console.log("done");
+ });
 
-var csvURL = 'https://docs.google.com/spreadsheets/d/1vFj89TtHZ9IE1FKTiK9mQAaXJrIhwOqEami9HyHy8hI/pub?gid=0&single=true&output=csv';
-
-request.get(csvURL, function (error, response, body) {
-    if (!error && response.statusCode == 200) {
-        var csv = body;
-        // Continue with your processing here.
-    }
-});
+ csv
+   .fromPath("youtube.csv", {headers: true})
+   .transform(function(obj){
+        return {
+            Title: obj.Title
+        };
+   })
+   .pipe(csv.createWriteStream({headers: true}))
+   .pipe(fs.createWriteStream("out.csv", {encoding: "utf8"}));
