@@ -1,0 +1,4 @@
+[07-Jan-2016 21:29:15 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/aefcoil/public_html/wp-content/themes/flatsome/index.php on line 8
+[13-Mar-2016 06:40:49 UTC] PHP Fatal error:  Call to undefined function add_theme_support() in /home/aefcoil/public_html/wp-content/themes/flatsome/functions.php on line 14
+[13-Mar-2016 06:40:50 UTC] PHP Fatal error:  Call to undefined function get_header() in /home/aefcoil/public_html/wp-content/themes/flatsome/404.php on line 13
+[13-Mar-2016 06:40:50 UTC] PHP Fatal error:  Call to undefined function is_active_sidebar() in /home/aefcoil/public_html/wp-content/themes/flatsome/footer.php on line 21
